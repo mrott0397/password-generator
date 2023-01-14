@@ -1,4 +1,13 @@
 // // Assignment Code
+
+
+if (addLowerCase === true) {
+    possibilities = possibilities + lowercaseCharacters;   
+   const lowerCaseGen = lowercaseCharacters[Math.floor(Math.random() * lowercaseCharacters.length)];
+   password = password + lowerCaseGen;
+
+       
+   }
 // var generateBtn = document.querySelector("#generate");
 
 // // Write password to the #password input
