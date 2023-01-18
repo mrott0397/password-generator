@@ -17,13 +17,7 @@ console.log(specialCharacters);
 console.log(possibilities);
 console.log(password);
 
-function writePassword() {
-    var password = generatePassword();
-  
-    var passwordText = document.querySelector("#password");
-  
-    passwordText.value = password;
-  }
+
 
 //Gathering info from series of prompts
 function generatePassword() {
@@ -67,19 +61,20 @@ function generatePassword() {
     }  for (let index = password.length; index < passwordLength; index++) {
         var randomindex = Math.floor(Math.random() * possibilities.length);
         password = password + possibilities[randomindex]};
-        console.log(password);
+        return password;
+    
     }
 
 
     
 // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
+function writePassword() {
+  var password = generatePassword();
 
-//   var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
-// }
+  passwordText.value = password;
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
